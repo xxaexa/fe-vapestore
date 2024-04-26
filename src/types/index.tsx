@@ -1,17 +1,12 @@
-import { ReactNode } from "react"
+
 
 export interface ProtectedRoute {
 
 }
 
 export interface LinkTextProps {
-  link: string
+  url: string
   text: string
-}
-
-export interface IconTextProps {
-  icon: ReactNode
-  style?: string
 }
 
 export interface TextProps {

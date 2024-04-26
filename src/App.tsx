@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // pages
-import { Home, Dashboard, AdminHome, MemberHome } from './pages';
+import { Home, Products, Product, Dashboard, AdminHome, MemberHome } from './pages';
 
 // components
 import { ProtectedRoute, ProtectedRole } from './components'
@@ -11,6 +11,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Products />} />
+        <Route path='/product/:name' element={<Product />} />
 
         <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<Dashboard />} >
